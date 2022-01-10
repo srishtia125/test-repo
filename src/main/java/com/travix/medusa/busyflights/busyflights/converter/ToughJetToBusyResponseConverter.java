@@ -14,6 +14,7 @@ public class ToughJetToBusyResponseConverter implements Converter<ToughJetRespon
     public BusyFlightsResponse convert(ToughJetResponse toughJetResponse) {
         BusyFlightsResponse busyFlightsResponse = new BusyFlightsResponse();
 	    busyFlightsResponse.setAirline(TOUGH_JET.getName());
+	     busyFlightsResponse.setCabinclass("");
 	    busyFlightsResponse.setDestinationAirportCode(toughJetResponse.getArrivalAirportName());
         busyFlightsResponse.setDepartureAirportCode(toughJetResponse.getDepartureAirportName());
         busyFlightsResponse.setPrice(convertToPrice(toughJetResponse.getBasePrice(),toughJetResponse.getTax(),toughJetResponse.getDiscount()));
