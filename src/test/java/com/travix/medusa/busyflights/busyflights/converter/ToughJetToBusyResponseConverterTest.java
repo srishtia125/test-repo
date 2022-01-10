@@ -40,9 +40,9 @@ public class ToughJetToBusyResponseConverterTest {
 
 
 	@Test
-	void convert_setNullCabinClass() {
+	void convert_setEmptyCabinClass() {
 		final BusyFlightsResponse busyFlightsResponse = toughJetToBusyResponseConverter.convert(toughJetResponse);
-		assertNull(busyFlightsResponse.getCabinclass());
+		assertEquals(busyFlightsResponse.getCabinclass(),"");
 	}
 
 	@Test
